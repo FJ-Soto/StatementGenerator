@@ -39,7 +39,7 @@ namespace FTDStatementPrinter
                 using (StreamReader reader = new StreamReader(Path.Combine(baseFileDirectory, "config.txt")))
                 {
                     string[] lines = reader.ReadToEnd().Split('\n');
-                    foreach(string line in lines)
+                    foreach (string line in lines)
                     {
                         string[] configs = line.Split('=');
 
@@ -68,8 +68,6 @@ namespace FTDStatementPrinter
         public void EnableCombine(bool enable = true)
         {
             EnableControl(btnGenerateCombined, enable);
-            EnableControl(btnCombinedApp, enable);
-            EnableControl(btnCombinedOS, enable);
         }
 
         private void EnableControl(Control c, bool enable = true)
@@ -93,7 +91,7 @@ namespace FTDStatementPrinter
                 // read stored creds
                 if (File.Exists(Path.Combine(baseFileDirectory, "_cs.bin")))
                 {
-                    using(StreamReader reader = new StreamReader(Path.Combine(baseFileDirectory, "_cs.bin")))
+                    using (StreamReader reader = new StreamReader(Path.Combine(baseFileDirectory, "_cs.bin")))
                     {
                         while (!reader.EndOfStream)
                         {
@@ -141,7 +139,7 @@ namespace FTDStatementPrinter
             CredentialsWindow credentialWindow = new CredentialsWindow();
             credentialWindow.ShowDialog();
 
-            if (credentialWindow.DialogResult ==  DialogResult.OK)
+            if (credentialWindow.DialogResult == DialogResult.OK)
             {
                 StatementControl control = new StatementControl(this, credentialWindow.Credentials);
                 splitContainer1.Panel2.Controls.Add(control);
@@ -174,7 +172,7 @@ namespace FTDStatementPrinter
         {
             using (StreamWriter writer = new StreamWriter(File.Open(Path.Combine(baseFileDirectory, "_cs.bin"), FileMode.Create)))
             {
-                foreach(StatementControl c in statementControls)
+                foreach (StatementControl c in statementControls)
                 {
                     if (c.Credentials.DoSave)
                     {
@@ -248,7 +246,8 @@ namespace FTDStatementPrinter
             if (statementControls.Any(x => x.HasStatements()))
             {
                 GenerateCombinedStatement();
-            } else
+            }
+            else
             {
                 btnGenerateCombined.Enabled = false;
             }
@@ -262,7 +261,7 @@ namespace FTDStatementPrinter
             List<string> files = new List<string>();
             foreach (StatementControl control in statementControls)
             {
-                
+
                 foreach (KeyValuePair<string, StatementDetail> record in control.Statements)
                 {
                     files.Add($"\"{record.Value.Filename}\"");
@@ -291,6 +290,8 @@ namespace FTDStatementPrinter
                 if (p.ExitCode == 0)
                 {
                     cumulativeStatementFilename = p.StandardOutput.ReadToEnd();
+                    EnableControl(btnCombinedApp);
+                    EnableControl(btnCombinedOS);
                 }
                 else
                 {
@@ -302,57 +303,46 @@ namespace FTDStatementPrinter
 
         private void btnOpenCombined_Click(object sender, EventArgs e)
         {
+            bool enableViewing = true;
             if (!statementControls.Any(x => x.HasStatements()))
             {
-                btnCombinedApp.Enabled = false;
                 MessageBox.Show("There are no generated reports. Generate some and retry to combine.");
+                enableViewing = false;
             }
             else
             {
                 if (string.IsNullOrEmpty(cumulativeStatementFilename) || !File.Exists(cumulativeStatementFilename))
                 {
-                    DialogResult res = MessageBox.Show("No cumulative statement found. Would you like to generate?", "Missing Statement", MessageBoxButtons.YesNo);
-
-                    if (res == DialogResult.Yes)
+                    MessageBox.Show("No cumulative statement found. Generate and try again.", "Missing Statement");
+                    enableViewing = false;
+                }
+                else
+                {
+                    Button btn = (Button)sender;
+                    if (Equals(btn.Text, "Open in App"))
                     {
-                        GenerateCombinedStatement();
+                        new StatementView("Cumulative Statement", cumulativeStatementFilename).Show();
+                    } else
+                    {
+                        // default btn.Text for opening in OS: "Open in OS"
+                        Process p = new Process
+                        {
+                            StartInfo = new ProcessStartInfo
+                            {
+                                FileName = "cmd.exe",
+                                UseShellExecute = false,
+                                Arguments = $"/C start \"\" \"{cumulativeStatementFilename}\"",
+                                CreateNoWindow = true,
+                            }
+                        };
+                        p.Start();
+                        p.Dispose();
                     }
                 }
-                new StatementView("Cumulative Statement", cumulativeStatementFilename).Show();
             }
-        }
 
-        private void btnCombinedOS_Click(object sender, EventArgs e)
-        {
-            if (!statementControls.Any(x => x.HasStatements()))
-            {
-                btnCombinedApp.Enabled = false;
-                MessageBox.Show("There are no generated reports. Generate some and retry to combine.");
-            } else
-            {
-                if (string.IsNullOrEmpty(cumulativeStatementFilename) || !File.Exists(cumulativeStatementFilename))
-                {
-                    DialogResult res = MessageBox.Show("No cumulative statement found. Would you like to generate?", "Missing Statement", MessageBoxButtons.YesNo);
-
-                    if (res == DialogResult.Yes)
-                    {
-                        GenerateCombinedStatement();
-                    }
-                }
-
-                Process p = new Process
-                {
-                    StartInfo = new ProcessStartInfo
-                    {
-                        FileName = "cmd.exe",
-                        UseShellExecute = false,
-                        Arguments = $"/C start \"\" \"{cumulativeStatementFilename}\"",
-                        CreateNoWindow = true,
-                    }
-                };
-                p.Start();
-                p.Dispose();
-            }
+            EnableControl(btnCombinedApp, enableViewing);
+            EnableControl(btnCombinedOS, enableViewing);
         }
     }
 }

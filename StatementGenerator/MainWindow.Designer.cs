@@ -30,6 +30,8 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnCombinedOS = new System.Windows.Forms.Button();
+            this.btnCombinedApp = new System.Windows.Forms.Button();
             this.btnGenerateCombined = new System.Windows.Forms.Button();
             this.gpFileSavingOpt = new System.Windows.Forms.GroupBox();
             this.btnChangeFileLocation = new System.Windows.Forms.Button();
@@ -37,9 +39,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGenAll = new System.Windows.Forms.Button();
             this.btnAddStatement = new System.Windows.Forms.Button();
-            this.btnCombinedApp = new System.Windows.Forms.Button();
             this.ftdHeader = new FTDStatementPrinter.StatementControl();
-            this.btnCombinedOS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -88,6 +88,28 @@
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Combined Statement Options";
+            // 
+            // btnCombinedOS
+            // 
+            this.btnCombinedOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCombinedOS.Location = new System.Drawing.Point(137, 61);
+            this.btnCombinedOS.Name = "btnCombinedOS";
+            this.btnCombinedOS.Size = new System.Drawing.Size(125, 24);
+            this.btnCombinedOS.TabIndex = 11;
+            this.btnCombinedOS.Text = "Open in OS";
+            this.btnCombinedOS.UseVisualStyleBackColor = true;
+            this.btnCombinedOS.Click += new System.EventHandler(this.btnOpenCombined_Click);
+            // 
+            // btnCombinedApp
+            // 
+            this.btnCombinedApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCombinedApp.Location = new System.Drawing.Point(6, 61);
+            this.btnCombinedApp.Name = "btnCombinedApp";
+            this.btnCombinedApp.Size = new System.Drawing.Size(125, 24);
+            this.btnCombinedApp.TabIndex = 10;
+            this.btnCombinedApp.Text = "Open in App";
+            this.btnCombinedApp.UseVisualStyleBackColor = true;
+            this.btnCombinedApp.Click += new System.EventHandler(this.btnOpenCombined_Click);
             // 
             // btnGenerateCombined
             // 
@@ -168,17 +190,6 @@
             this.btnAddStatement.UseVisualStyleBackColor = true;
             this.btnAddStatement.Click += new System.EventHandler(this.btnAddStatement_Click);
             // 
-            // btnCombinedApp
-            // 
-            this.btnCombinedApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCombinedApp.Location = new System.Drawing.Point(6, 61);
-            this.btnCombinedApp.Name = "btnCombinedApp";
-            this.btnCombinedApp.Size = new System.Drawing.Size(125, 24);
-            this.btnCombinedApp.TabIndex = 10;
-            this.btnCombinedApp.Text = "Open in App";
-            this.btnCombinedApp.UseVisualStyleBackColor = true;
-            this.btnCombinedApp.Click += new System.EventHandler(this.btnOpenCombined_Click);
-            // 
             // ftdHeader
             // 
             this.ftdHeader.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -190,17 +201,6 @@
             this.ftdHeader.Statements = null;
             this.ftdHeader.TabIndex = 8;
             // 
-            // btnCombinedOS
-            // 
-            this.btnCombinedOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCombinedOS.Location = new System.Drawing.Point(137, 61);
-            this.btnCombinedOS.Name = "btnCombinedOS";
-            this.btnCombinedOS.Size = new System.Drawing.Size(125, 24);
-            this.btnCombinedOS.TabIndex = 11;
-            this.btnCombinedOS.Text = "Open in OS";
-            this.btnCombinedOS.UseVisualStyleBackColor = true;
-            this.btnCombinedOS.Click += new System.EventHandler(this.btnCombinedOS_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,7 +209,7 @@
             this.Controls.Add(this.splitContainer1);
             this.MinimumSize = new System.Drawing.Size(780, 39);
             this.Name = "MainWindow";
-            this.Text = "FTD Statement Printer";
+            this.Text = "Statement Generator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
