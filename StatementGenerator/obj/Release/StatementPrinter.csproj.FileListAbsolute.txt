@@ -1,0 +1,13 @@
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\bin\Release\FTDStatementPrinter.exe.config
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\bin\Release\FTDStatementPrinter.exe
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\bin\Release\FTDStatementPrinter.pdb
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\StatementPrinter.csprojAssemblyReference.cache
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\FTDStatementPrinter.CredentialsWindow.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\FTDStatementPrinter.StatementControl.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\FTDStatementPrinter.MainWindow.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\FTDStatementPrinter.Properties.Resources.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\FTDStatementPrinter.StatementView.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\StatementPrinter.csproj.GenerateResource.cache
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\StatementPrinter.csproj.CoreCompileInputs.cache
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\FTDStatementPrinter.exe
+D:\Documents HDD\Workstations\C#\Personal Projects\FTD_Statement\FTDStatementPrinter\FTDStatementPrinter\obj\Release\FTDStatementPrinter.pdb

@@ -1,0 +1,13 @@
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\bin\Release\StatementGenerator.exe.config
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\bin\Release\StatementGenerator.exe
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\bin\Release\StatementGenerator.pdb
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\StatementGenerator.csprojAssemblyReference.cache
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\FTDStatementPrinter.CredentialsWindow.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\FTDStatementPrinter.StatementControl.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\FTDStatementPrinter.MainWindow.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\StatementGenerator.Properties.Resources.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\FTDStatementPrinter.StatementView.resources
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\StatementGenerator.csproj.GenerateResource.cache
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\StatementGenerator.csproj.CoreCompileInputs.cache
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\StatementGenerator.exe
+D:\Documents HDD\Workstations\C#\Personal Projects\StatementGenerator\StatementGen\StatementGenerator\obj\Release\StatementGenerator.pdb
