@@ -365,7 +365,7 @@ namespace FTDStatementPrinter
 
                 if (!string.IsNullOrEmpty(filename) && File.Exists(filename))
                 {
-                    new StatementView($"Statement for {record}", filename).Show();
+                    new StatementView($"Statement for {record.Key}", filename).Show();
                 }
                 else
                 {
