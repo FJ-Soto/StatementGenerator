@@ -1,5 +1,5 @@
 # StatementGenerator
-This is a Windows application that aims to facilitate the process of generating and obtaining statement PDFs. This application uses Python to webscrape the designated websites for the latest statement. 
+This is a Windows application that aims to facilitate the process of generating and obtaining statement PDFs. In so far, this application extracts ComEd, PeoplesGas, FTD, Xfinity, Amazon Synchrony, and Chicago Utility statements. This application uses Python to webscrape the designated websites for the latest statement. 
 
 To install and run this application, simply clone the repository and run the executible files located in the StatementGenerator/bin/Release/ folder. If you not have so already, you will need to install the following libraries: BeautifulSoup, selenium, requests, and PyPDF.
 
