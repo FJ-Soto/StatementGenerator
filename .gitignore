@@ -40,9 +40,9 @@ bld/
 [Ll]ogs/
 
 # avoid scripts in bin
-![Bb]in/Driver
-![Bb]in/PrintScripts
-![Bb]in/StatementScripts
+![Bb]in/Driver/
+![Bb]in/PrintScripts/
+![Bb]in/StatementScripts/
 ![Bb]in/CombinePDFs.py
 ![Bb]in/StatementMain.py
 
