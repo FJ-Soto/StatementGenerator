@@ -6,7 +6,7 @@ from fitz import Document
 from requests import Session
 from bs4 import BeautifulSoup
 from datetime import datetime
-from PyPDF2.utils import PdfReadError
+from PyPDF2.errors import PdfReadError
 
 from .Statement import Statement
 from .Utilities import HEADERS, is_OK, LoginFailedException, HttpFailedException

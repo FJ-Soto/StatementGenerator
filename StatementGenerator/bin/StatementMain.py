@@ -2,7 +2,7 @@ import sys
 import os
 import traceback
 
-from PyPDF2.utils import PdfReadError
+from PyPDF2.errors import PdfReadError
 from selenium.common.exceptions import ElementNotVisibleException, TimeoutException
 
 from StatementScripts.ComEDStatement import ComEDStatement
